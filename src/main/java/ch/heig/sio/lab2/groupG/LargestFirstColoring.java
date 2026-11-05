@@ -18,12 +18,6 @@ public final class LargestFirstColoring implements ColoringAlgorithm {
 
         for (int i = 0; i < n; i++) {
             int vertex = sortedIndices[i];
-
-            colors[vertex] = 0;
-        }
-
-        for (int i = 0; i < n; i++) {
-            int vertex = sortedIndices[i];
             boolean[] usedColors = new boolean[n];
 
             for (int j = 0; j < graph.degree(vertex); j++) {
