@@ -16,11 +16,12 @@ public final class Main {
   public static void main(String[] args) throws IOException {
     Path dataDir = Path.of(args.length > 0 ? args[0] : "data");
 
-    ColoringAlgorithm algorithm = new TrivialColoring();
+    //ColoringAlgorithm algorithm = new TrivialColoring();
+    ColoringAlgorithm algorithm = new LargestFirstColoring();
 
     List<Path> files;
     try (Stream<Path> stream = Files.list(dataDir)) {
-      files = stream.filter(p -> p.toString().endsWith(".txt")).sorted().toList();
+      files = stream.filter(pbMAC -> p.toString().endsWith(".txt")).sorted().toList();
     }
 
     for (Path file : files) {

@@ -90,7 +90,7 @@ public final class Graph {
   }
 
   /**
-   * Renvoie le degré d'un sommet.
+   * Renvoie le degré d'un sommet. O(1)
    *
    * @param v numéro du sommet, dans {@code [0, n-1]}
    * @return le degré de {@code v}
