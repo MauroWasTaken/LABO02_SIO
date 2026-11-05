@@ -18,7 +18,6 @@ public final class Main {
 
     //ColoringAlgorithm algorithm = new TrivialColoring();
     ColoringAlgorithm algorithm = new LargestFirstColoring();
-
     List<Path> files;
     try (Stream<Path> stream = Files.list(dataDir)) {
       files = stream.filter(pbMAC -> p.toString().endsWith(".txt")).sorted().toList();
