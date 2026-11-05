@@ -20,7 +20,7 @@ public final class Main {
     ColoringAlgorithm algorithm = new LargestFirstColoring();
     List<Path> files;
     try (Stream<Path> stream = Files.list(dataDir)) {
-      files = stream.filter(pbMAC -> p.toString().endsWith(".txt")).sorted().toList();
+      files = stream.filter(p -> p.toString().endsWith(".txt")).sorted().toList();
     }
 
     for (Path file : files) {
